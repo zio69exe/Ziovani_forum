@@ -21,13 +21,6 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-// Route::get('/test_domPDF', function(){
-//     $pdf = App::make('dompdf.wrapper');
-//     $pdf->loadHTML('<h1>Test</h1>');
-//     return $pdf->stream();
-// });
-
-// Route::get('/', [AuthController::class, 'home']);
 // Login
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/postlogin', [AuthController::class, 'postlogin']);
@@ -35,11 +28,7 @@ Route::get('/register', [AuthController::class, 'register']);
 Route::post('/postregister', [AuthController::class, 'postregister']);
 Route::get('/logout', [AuthController::class, 'logout']);
 
-// untuk user
-// Route::middleware(['auth', 'role:users'])->group(function(){
-//     Route::get('/', [tampilController::class, 'index']);
-//     Route::get('/forum/create', [ForumController::class, 'create']);
-// });
+
 
 //middleware untuk role admin
 Route::middleware(['web','auth', 'role:admin'])->group(function () {
