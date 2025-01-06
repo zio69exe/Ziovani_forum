@@ -15,7 +15,7 @@
                             @csrf
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="email" id="your_name" placeholder="Your Email"/ value="{{old('email')}}">
+                                <input type="email" name="email" id="your_name" placeholder="Your Email"/ value="{{old('email')}}">
                             </div>
                             @error('email')
                                 <div class="invalid-feedback mt-2" style="margin-top: -8%">{{ $message }}</div>
